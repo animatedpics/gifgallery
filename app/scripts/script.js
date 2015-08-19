@@ -14,7 +14,7 @@ window.MyOpengifs = angular.module('myOpengifs', ['elasticsearch'],
 MyOpengifs.factory('gifService',
     ['$q', 'esFactory', '$location', function($q, elasticsearch, $location){
         var client = elasticsearch({
-            host: 'http://search.gif.gallery:9200'
+            host: 'http://search.gif.gallery'
         });
 
         /**
