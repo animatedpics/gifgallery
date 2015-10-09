@@ -48,7 +48,7 @@
                 <h2 id="gallerytitle">gif.gallery</h2>
                 <ul>
                     <section ng-repeat="doc in indexVM.results.hits.hits">
-                        <img src="{{doc._source.url}}"></img>
+                        <img ng-if="doc._source.headline != 'N/A'" src="{{doc._source.url}}"></img>
                         <p ng-if="doc._source.headline == 'N/A'"></p>
                         <p ng-if="doc._source.headline != 'N/A'">{{doc._source.headline}}</p>
                     </section>
